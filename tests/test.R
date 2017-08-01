@@ -16,7 +16,7 @@ options( survey.replicates.mse = TRUE )
 library(survey)
 
 cpsasec_df <- 
-	readRDS( file.path( getwd() , "cpsasec16.rds" ) 
+	readRDS( file.path( getwd() , "2016 cps asec.rds" ) 
 
 cpsasec_design <-
 	svrepdesign(
