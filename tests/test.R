@@ -18,6 +18,12 @@ library(survey)
 cpsasec_df <- 
 	readRDS( file.path( getwd() , "2016 cps asec.rds" ) 
 
+variables_to_keep <-
+	c( 'a_maritl' , 'gestfips' , 'a_sex' , 'ptotval' , 'moop' , 'a_age' , 'htotval' , 
+	'a_exprrp' , 'marsupwt' , grep( "pwwgt" , names( cpsasec_df ) , value = TRUE ) )
+	
+cpsasec_df <- cpsasec_df[ variables_to_keep ] ; gc()
+	
 cpsasec_design <-
 	svrepdesign(
 		weights = ~ marsupwt ,
