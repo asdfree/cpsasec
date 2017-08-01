@@ -16,7 +16,7 @@ options( survey.replicates.mse = TRUE )
 library(survey)
 
 cpsasec_df <- 
-	readRDS( file.path( getwd() , "2016 cps asec.rds" ) 
+	readRDS( file.path( getwd() , "2016 cps asec.rds" ) )
 
 variables_to_keep <-
 	c( 'a_maritl' , 'gestfips' , 'a_sex' , 'ptotval' , 'moop' , 'a_age' , 'htotval' , 
