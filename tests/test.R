@@ -20,7 +20,8 @@ cpsasec_df <-
 
 variables_to_keep <-
 	c( 'a_maritl' , 'gestfips' , 'a_sex' , 'ptotval' , 'moop' , 'a_age' , 'htotval' , 
-	'a_exprrp' , 'marsupwt' , grep( "pwwgt" , names( cpsasec_df ) , value = TRUE ) )
+	'one' , 'a_exprrp' , 'marsupwt' , 
+	grep( "pwwgt" , names( cpsasec_df ) , value = TRUE ) )
 	
 cpsasec_df <- cpsasec_df[ variables_to_keep ] ; gc()
 	
