@@ -1,15 +1,15 @@
 if ( .Platform$OS.type == 'windows' ) memory.limit( 256000 )
 
+this_sample_break <- Sys.getenv( "this_sample_break" )
+
 library(lodown)
 
 cpsasec_cat <-
 	get_catalog( "cpsasec" ,
 		output_dir = file.path( getwd() ) )
 
-# sample 15% of the records
-which_records <- sample( seq( nrow( cpsasec_cat ) ) , round( nrow( cpsasec_cat ) * 0.15 ) )
+record_categories <- ceiling( seq( nrow( cpsasec_cat ) ) / ceiling( nrow( cpsasec_cat ) / 10 ) )
 
-# always sample year == 2016
-cpsasec_cat <- unique( rbind( cpsasec_cat[ which_records , ] , subset( cpsasec_cat , year == 2016 ) ) )
+cpsasec_cat <- unique( rbind( cpsasec_cat[ record_categories == this_sample_break , ] , cpsasec_cat[ cpsasec_cat$year == 2016 , ] ) )
 
 lodown( "cpsasec" , cpsasec_cat )
