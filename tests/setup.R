@@ -20,8 +20,6 @@ if( any( cpsasec_cat$year == 2016 ) ){
 
 
 
-options( survey.replicates.mse = TRUE )
-
 library(survey)
 
 cpsasec_df <- 
@@ -41,7 +39,8 @@ cpsasec_design <-
 		type = "Fay" ,
 		rho = ( 1 - 1 / sqrt( 4 ) ) ,
 		data = cpsasec_df ,
-		combined.weights = TRUE
+		combined.weights = TRUE ,
+		mse = TRUE
 	)
 cpsasec_design <- 
 	update( 
