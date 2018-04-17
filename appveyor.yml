@@ -41,7 +41,6 @@ environment:
     - this_sample_break: 11
 
 
-
 artifacts:
   - path: '*.Rcheck\**\*.log'
     name: Logs
@@ -54,3 +53,9 @@ artifacts:
 
   - path: '*.Rcheck\**\*.Rout'
     name: Logs
+
+  - path: '\*_*.tar.gz'
+    name: Bits
+
+  - path: '\*_*.zip'
+    name: Bits
