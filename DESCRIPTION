@@ -4,7 +4,7 @@ Title: cpsasec
 Version: 0.1.0
 Author: Anthony Joseph Damico
 Maintainer: Anthony Joseph Damico <ajdamico@gmail.com>
-Description: A continuous integration package, tested on ajdamico/asdfree commit 8a3ed49d83ff3fc2635f62f4c08c984cdaa95fc7 ajdamico/lodown commit 348cb6f6db2372ce104c097b6ea1f72a5451285c
+Description: A continuous integration package, tested on ajdamico/asdfree commit 8a3ed49d83ff3fc2635f62f4c08c984cdaa95fc7 ajdamico/lodown commit 7dde2e51a2dfe495d9d75ad9726403548634d826
 License: GPL-3
 Imports: survey, convey, lodown
 Encoding: UTF-8
